@@ -9,6 +9,116 @@
 </head>
 
 <body>
+    
+    <!-- final shopping cart -->
+
+            <style>
+                #add-to-cart-btn1 {
+                    background-color: rgb(255, 216, 20);
+                    color: rgb(0, 0, 0);
+                    cursor: pointer;
+                    border-radius: 20px;
+                    border: none;
+                    padding: 10px;
+                    font-size: 15px;
+                }
+                
+                #add-to-cart-btn2 {
+                    background-color: rgb(255, 216, 20);
+                    color: rgb(0, 0, 0);
+                    cursor: pointer;
+                    border-radius: 20px;
+                    border: none;
+                    padding: 10px;
+                    font-size: 15px;
+                }
+                
+                #add-to-cart-btn:hover {
+                    background-color: rgb(208, 8, 8);
+                    opacity: 0.3;
+                }
+                
+                #add-to-cart-btn:active {
+                    background-color: rgb(0, 208, 8);
+                }
+                
+                #container {
+                    border: solid 2px red;
+                    width: 500px;
+                    display: border;
+                    background-color: #add8e6;
+                    height: 500px;
+                }
+            </style>
+
+            <div id="container">
+
+
+                <div>
+                    <ul id="list-of-Product">
+                        <h2>List of Product</h2>
+                    </ul>
+                </div>
+
+
+
+                <div style="display: block; ">
+                    <ul id="Product1" style="width: 350px;
+       display: inline-block;">
+                        <li>
+                            <h3 style="display: inline-block;">SanDisk 128GB Ultra <span style="font-size: 14px; background-color: aqua; color: black;">  £17.29</span></h3>
+                        </li>
+                    </ul>
+                    <button id="add-to-cart-btn1" style="padding: 5px; display: inline-block;">Add to Cart</button>
+                </div>
+
+
+                <div style="display: block; ">
+                    <ul id="Product2" style="width: 350px;
+       display: inline-block;">
+                        <li>
+                            <h3 style="display: inline-block;">Bose Wireless Headphones<span style="font-size: 14px; background-color: aqua; color: black;">  £279.00 </span></h3>
+                        </li>
+                    </ul>
+                    <button id="add-to-cart-btn2" style="padding: 5px; display: inline-block;">Add to Cart</button>
+                </div>
+
+                <div style="display: block; ">
+                    <ul id="shopping-cart" style="width: 350px;
+        display: inline-block;">
+                        <h2 style="display: inline-block;">shopping cart </h2>
+                    </ul>
+
+                </div>
+                <script>
+                    var item;
+
+
+                    item = [];
+
+
+                    document.getElementById('add-to-cart-btn1').addEventListener('click', (event) => {
+                        item.unshift('SanDisk 128GB Ultra £17.29');
+                        let element_shopping_cart = document.getElementById('shopping-cart');
+                        let new_li = document.createElement('li');
+                        new_li.innerText = item.shift();
+
+                        element_shopping_cart.appendChild(new_li);
+
+                    });
+
+                    document.getElementById('add-to-cart-btn2').addEventListener('click', (event) => {
+                        item.unshift('Bose Wireless Headphones £279.00');
+                        let element_shopping_cart2 = document.getElementById('shopping-cart');
+                        let new_li2 = document.createElement('li');
+                        new_li2.innerText = item.shift();
+
+                        element_shopping_cart2.appendChild(new_li2);
+
+                    });
+                </script>
+
+                <!-- final shopping cart -->
 
     <br>
     <!-- Project: Select a random facilitator -->
