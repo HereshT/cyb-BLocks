@@ -1,6 +1,5 @@
 # CYF Blocks Project Template
-
-## Introduction
+ 
 
 This is a very basic template for a CYF Blocks project so that you can host it on Netlify as part of the "Ship It!" portion of the CodeYourFuture Fundamentals course.
 
